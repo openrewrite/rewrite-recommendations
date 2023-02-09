@@ -95,6 +95,12 @@ var rewriteVersion = if(project.hasProperty("releasing")) {
 }
 
 dependencies {
+    constraints {
+        implementation("com.fasterxml.woodstox:woodstox-core:6.5.0") {
+            because("Versions <= 6.3.1 contain vulnerabilities")
+        }
+    }
+
     implementation("org.openrewrite:rewrite-yaml:$rewriteVersion")
     implementation("org.openrewrite:rewrite-java:${rewriteVersion}")
     implementation("org.openrewrite:rewrite-xml:${rewriteVersion}")
