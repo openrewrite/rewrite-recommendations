@@ -171,7 +171,7 @@ configure<PublishingExtension> {
                         while (i < length) {
                             (dependencyList.item(i) as org.w3c.dom.Element).let { dependency ->
                                 if ((dependency.getElementsByTagName("scope")
-                                        .item(0) as org.w3c.dom.Element).textContent == "provided"
+                                        .item(0) as org.w3c.dom.Element)?.textContent == "provided"
                                 ) {
                                     dependencies.removeChild(dependency)
                                     i--
