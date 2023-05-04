@@ -22,10 +22,10 @@ tags:
   - health check
   - radar
 recipeList:
-  - org.openrewrite.java.cleanup.NoDoubleBraceInitialization
-  - org.openrewrite.java.cleanup.CaseInsensitiveComparisonsDoNotChangeCase
-  - org.openrewrite.java.cleanup.EqualsAvoidsNull
-  - org.openrewrite.java.cleanup.UseDiamondOperator
+  - org.openrewrite.staticanalysis.NoDoubleBraceInitialization
+  - org.openrewrite.staticanalysis.CaseInsensitiveComparisonsDoNotChangeCase
+  - org.openrewrite.staticanalysis.EqualsAvoidsNull
+  - org.openrewrite.staticanalysis.UseDiamondOperator
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recommendations.CodeStyle
@@ -39,11 +39,11 @@ recipeList:
   - org.openrewrite.java.format.BlankLines
   - org.openrewrite.java.format.RemoveTrailingWhitespace
   - org.openrewrite.java.format.WrappingAndBraces
-  - org.openrewrite.java.cleanup.UseJavaStyleArrayDeclarations
+  - org.openrewrite.staticanalysis.UseJavaStyleArrayDeclarations
   - org.openrewrite.xml.AutoFormat
   - org.openrewrite.hcl.format.AutoFormat
   - org.openrewrite.java.cleanup.UnnecessaryParentheses
-  - org.openrewrite.java.cleanup.RemoveExtraSemicolons
+  - org.openrewrite.staticanalysis.RemoveExtraSemicolons
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recommendations.DependencyManagement
