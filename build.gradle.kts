@@ -96,8 +96,8 @@ var rewriteVersion = if(project.hasProperty("releasing")) {
 
 dependencies {
     constraints {
-        implementation("com.fasterxml.woodstox:woodstox-core:6.5.0") {
-            because("Versions <= 6.3.1 contain vulnerabilities")
+        implementation("com.fasterxml.woodstox:woodstox-core:6.5.1") {
+            because("Versions <= 6.3.1")
         }
     }
 
@@ -107,7 +107,7 @@ dependencies {
     implementation("org.openrewrite:rewrite-hcl:${rewriteVersion}")
     implementation("org.openrewrite:rewrite-maven:${rewriteVersion}")
 
-    runtimeOnly("com.fasterxml.jackson.core:jackson-core:2.14.+")
+    runtimeOnly("com.fasterxml.jackson.core:jackson-core:2.15.1")
 
     compileOnly("org.projectlombok:lombok:latest.release")
     annotationProcessor("org.projectlombok:lombok:latest.release")
