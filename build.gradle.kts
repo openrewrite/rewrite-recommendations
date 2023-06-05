@@ -36,7 +36,7 @@ plugins {
 }
 
 rewrite {
-    activeRecipe("org.openrewrite.java.format.AutoFormat", "org.openrewrite.java.cleanup.Cleanup")
+    activeRecipe("org.openrewrite.java.format.AutoFormat", "org.openrewrite.staticanalysis.CodeCleanup")
 }
 
 apply(plugin = "nebula.publish-verification")
@@ -106,6 +106,7 @@ dependencies {
     implementation("org.openrewrite:rewrite-xml:${rewriteVersion}")
     implementation("org.openrewrite:rewrite-hcl:${rewriteVersion}")
     implementation("org.openrewrite:rewrite-maven:${rewriteVersion}")
+    implementation("org.openrewrite:rewrite-static-analysis:${rewriteVersion}")
 
     runtimeOnly("com.fasterxml.jackson.core:jackson-core:2.15.1")
 
