@@ -42,7 +42,7 @@ recipeList:
   - org.openrewrite.staticanalysis.UseJavaStyleArrayDeclarations
   - org.openrewrite.xml.AutoFormat
   - org.openrewrite.hcl.format.AutoFormat
-  - org.openrewrite.java.cleanup.UnnecessaryParentheses
+  - org.openrewrite.staticanalysis.UnnecessaryParentheses
   - org.openrewrite.staticanalysis.RemoveExtraSemicolons
 ---
 type: specs.openrewrite.org/v1beta/recipe
