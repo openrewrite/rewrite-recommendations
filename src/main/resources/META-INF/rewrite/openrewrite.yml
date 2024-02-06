@@ -37,6 +37,9 @@ recipeList:
   - org.openrewrite.java.recipes.RecipeEqualsAndHashCodeCallSuper
   - org.openrewrite.java.recipes.UseTreeRandomId
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
+  - org.openrewrite.java.ChangeType:
+      oldFullyQualifiedTypeName: org.jetbrains.annotations.Nullable
+      newFullyQualifiedTypeName: org.openrewrite.internal.lang.Nullable
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recipes.RecipeTestingBestPractices
