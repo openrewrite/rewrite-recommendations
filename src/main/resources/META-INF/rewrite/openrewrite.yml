@@ -51,6 +51,7 @@ preconditions:
       checkAssignability: true
 recipeList:
   - org.openrewrite.java.OrderImports
+  - org.openrewrite.java.recipes.RewriteTestClassesShouldNotBePublic
   - org.openrewrite.java.recipes.SelectRecipeExamples
   - org.openrewrite.java.recipes.SourceSpecTextBlockIndentation
   - org.openrewrite.java.testing.cleanup.RemoveTestPrefix
