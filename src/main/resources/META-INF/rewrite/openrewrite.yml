@@ -37,9 +37,7 @@ recipeList:
   - org.openrewrite.java.recipes.RecipeEqualsAndHashCodeCallSuper
   - org.openrewrite.java.recipes.UseTreeRandomId
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
-  - org.openrewrite.java.ChangeType:
-      oldFullyQualifiedTypeName: org.jetbrains.annotations.Nullable
-      newFullyQualifiedTypeName: org.openrewrite.internal.lang.Nullable
+  - org.openrewrite.recipes.RecipeNullabilityBestPractices
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recipes.RecipeTestingBestPractices
@@ -57,3 +55,15 @@ recipeList:
   - org.openrewrite.java.testing.cleanup.RemoveTestPrefix
   - org.openrewrite.java.testing.cleanup.TestsShouldNotBePublic
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
+  - org.openrewrite.recipes.RecipeNullabilityBestPractices
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: org.openrewrite.recipes.RecipeNullabilityBestPractices
+displayName: Recipe nullability best practices
+description: Use OpenRewrite internal nullability annotations; drop JetBrains annotations; use `package-info.java` instead.
+recipeList:
+- org.openrewrite.java.ChangeType:
+    oldFullyQualifiedTypeName: org.jetbrains.annotations.Nullable
+    newFullyQualifiedTypeName: org.openrewrite.internal.lang.Nullable
+- org.openrewrite.java.RemoveAnnotation:
+    annotationPattern: '@org.jetbrains.annotations.NotNull'
