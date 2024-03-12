@@ -36,8 +36,11 @@ recipeList:
   - org.openrewrite.java.recipes.MissingOptionExample
   - org.openrewrite.java.recipes.RecipeEqualsAndHashCodeCallSuper
   - org.openrewrite.java.recipes.UseTreeRandomId
+  - org.openrewrite.staticanalysis.InlineVariable
   - org.openrewrite.staticanalysis.MissingOverrideAnnotation
+  - org.openrewrite.staticanalysis.NeedBraces
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
+  - org.openrewrite.staticanalysis.UseDiamondOperator
   - org.openrewrite.recipes.RecipeNullabilityBestPractices
 ---
 type: specs.openrewrite.org/v1beta/recipe
@@ -55,6 +58,7 @@ recipeList:
   - org.openrewrite.java.recipes.SourceSpecTextBlockIndentation
   - org.openrewrite.java.testing.cleanup.RemoveTestPrefix
   - org.openrewrite.java.testing.cleanup.TestsShouldNotBePublic
+  - org.openrewrite.staticanalysis.CommonStaticAnalysis
   - org.openrewrite.staticanalysis.MissingOverrideAnnotation
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
   - org.openrewrite.recipes.RecipeNullabilityBestPractices
