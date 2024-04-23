@@ -42,6 +42,7 @@ recipeList:
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
   - org.openrewrite.staticanalysis.UseDiamondOperator
   - org.openrewrite.recipes.RecipeNullabilityBestPractices
+  - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recipes.RecipeTestingBestPractices
@@ -62,6 +63,7 @@ recipeList:
   - org.openrewrite.staticanalysis.MissingOverrideAnnotation
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
   - org.openrewrite.recipes.RecipeNullabilityBestPractices
+  - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recipes.RecipeNullabilityBestPractices
