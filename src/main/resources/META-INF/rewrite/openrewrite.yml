@@ -21,6 +21,12 @@ description: Best practices for OpenRewrite recipe development.
 recipeList:
   - org.openrewrite.recipes.JavaRecipeBestPractices
   - org.openrewrite.recipes.RecipeTestingBestPractices
+  - org.openrewrite.recipes.RecipeNullabilityBestPractices
+  - org.openrewrite.java.OrderImports
+  - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
+  - org.openrewrite.staticanalysis.InlineVariable
+  - org.openrewrite.staticanalysis.MissingOverrideAnnotation
+  - org.openrewrite.staticanalysis.UseDiamondOperator
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recipes.JavaRecipeBestPractices
@@ -31,18 +37,12 @@ preconditions:
       fullyQualifiedTypeName: org.openrewrite.Recipe
       checkAssignability: true
 recipeList:
-  - org.openrewrite.java.OrderImports
   - org.openrewrite.java.recipes.ExecutionContextParameterName
   - org.openrewrite.java.recipes.MissingOptionExample
   - org.openrewrite.java.recipes.RecipeEqualsAndHashCodeCallSuper
   - org.openrewrite.java.recipes.UseTreeRandomId
-  - org.openrewrite.staticanalysis.InlineVariable
-  - org.openrewrite.staticanalysis.MissingOverrideAnnotation
   - org.openrewrite.staticanalysis.NeedBraces
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
-  - org.openrewrite.staticanalysis.UseDiamondOperator
-  - org.openrewrite.recipes.RecipeNullabilityBestPractices
-  - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recipes.RecipeTestingBestPractices
@@ -53,17 +53,13 @@ preconditions:
       fullyQualifiedTypeName: org.openrewrite.test.RewriteTest
       checkAssignability: true
 recipeList:
-  - org.openrewrite.java.OrderImports
   - org.openrewrite.java.recipes.RewriteTestClassesShouldNotBePublic
   - org.openrewrite.java.recipes.SelectRecipeExamples
   - org.openrewrite.java.recipes.SourceSpecTextBlockIndentation
   - org.openrewrite.java.testing.cleanup.RemoveTestPrefix
   - org.openrewrite.java.testing.cleanup.TestsShouldNotBePublic
-  # - org.openrewrite.staticanalysis.CommonStaticAnalysis
-  - org.openrewrite.staticanalysis.MissingOverrideAnnotation
+  - org.openrewrite.staticanalysis.NeedBraces
   - org.openrewrite.staticanalysis.RemoveSystemOutPrintln
-  - org.openrewrite.recipes.RecipeNullabilityBestPractices
-  - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: org.openrewrite.recipes.RecipeNullabilityBestPractices
