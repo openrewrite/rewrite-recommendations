@@ -79,6 +79,6 @@ recipeList:
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@org.jetbrains.annotations.NotNull'
   - org.openrewrite.java.RemoveAnnotation:
-      annotationPattern: '@javax.annotation.NotNull'
+      annotationPattern: '@javax.annotation.Nonnull'
   - org.openrewrite.java.RemoveAnnotation:
-      annotationPattern: '@jakarta.annotation.NotNull'
+      annotationPattern: '@jakarta.annotation.Nonnull'
