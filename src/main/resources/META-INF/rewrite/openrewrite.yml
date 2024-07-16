@@ -67,6 +67,7 @@ name: org.openrewrite.recipes.RecipeNullabilityBestPractices
 displayName: Recipe nullability best practices
 description: Use OpenRewrite internal nullability annotations; drop JetBrains annotations; use `package-info.java` instead.
 recipeList:
+  - org.openrewrite.staticanalysis.NullableOnMethodReturnType
   - org.openrewrite.java.ChangeType:
       oldFullyQualifiedTypeName: org.jetbrains.annotations.Nullable
       newFullyQualifiedTypeName: org.openrewrite.internal.lang.Nullable
