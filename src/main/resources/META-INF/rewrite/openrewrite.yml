@@ -25,6 +25,7 @@ recipeList:
   - org.openrewrite.java.OrderImports
   - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
   - org.openrewrite.staticanalysis.InlineVariable
+  - org.openrewrite.staticanalysis.LambdaBlockToExpression
   - org.openrewrite.staticanalysis.MissingOverrideAnnotation
   - org.openrewrite.staticanalysis.UseDiamondOperator
 ---
