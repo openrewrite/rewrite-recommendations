@@ -23,6 +23,7 @@ recipeList:
   - org.openrewrite.recipes.RecipeTestingBestPractices
   - org.openrewrite.recipes.RecipeNullabilityBestPractices
   - org.openrewrite.java.OrderImports
+  - org.openrewrite.java.RemoveUnusedImports
   - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
   - org.openrewrite.staticanalysis.InlineVariable
   - org.openrewrite.staticanalysis.LambdaBlockToExpression
