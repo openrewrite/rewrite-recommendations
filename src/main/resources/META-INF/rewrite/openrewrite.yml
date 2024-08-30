@@ -71,18 +71,10 @@ description: Use JSpecify nullable annotations; drop Nonnull annotations; use `N
 recipeList:
   - org.openrewrite.java.jspecify.MigrateFromOpenRewriteAnnotations
   - org.openrewrite.staticanalysis.NullableOnMethodReturnType
-  - org.openrewrite.java.ChangeType:
-      oldFullyQualifiedTypeName: org.jetbrains.annotations.Nullable
-      newFullyQualifiedTypeName: org.jspecify.annotations.Nullable
-  - org.openrewrite.java.ChangeType:
-      oldFullyQualifiedTypeName: javax.annotation.Nullable
-      newFullyQualifiedTypeName: org.jspecify.annotations.Nullable
-  - org.openrewrite.java.ChangeType:
-      oldFullyQualifiedTypeName: jakarta.annotation.Nullable
-      newFullyQualifiedTypeName: org.jspecify.annotations.Nullable
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@org.jetbrains.annotations.NotNull'
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@javax.annotation.Nonnull'
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@jakarta.annotation.Nonnull'
+  - org.openrewrite.java.jspecify.MigrateToJspecify
