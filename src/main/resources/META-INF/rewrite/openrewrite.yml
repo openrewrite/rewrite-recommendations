@@ -25,11 +25,16 @@ recipeList:
   - org.openrewrite.java.OrderImports
   - org.openrewrite.java.RemoveUnusedImports
   - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
+  - org.openrewrite.java.format.RemoveTrailingWhitespace
   - org.openrewrite.staticanalysis.InlineVariable
   - org.openrewrite.staticanalysis.LambdaBlockToExpression
   - org.openrewrite.staticanalysis.MissingOverrideAnnotation
   - org.openrewrite.staticanalysis.OperatorWrap:
       wrapOption: EOL
+  - org.openrewrite.staticanalysis.RemoveUnusedLocalVariables
+  - org.openrewrite.staticanalysis.RemoveUnusedPrivateFields
+  - org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods
+  - org.openrewrite.staticanalysis.UnnecessaryThrows
   - org.openrewrite.staticanalysis.UseDiamondOperator
 ---
 type: specs.openrewrite.org/v1beta/recipe
