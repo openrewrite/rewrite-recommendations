@@ -84,7 +84,6 @@ displayName: Recipe nullability best practices
 description: Use JSpecify nullable annotations; drop Nonnull annotations; use `NullMarked` on `package-info.java` instead.
 recipeList:
   - org.openrewrite.java.jspecify.MigrateFromOpenRewriteAnnotations
-  - org.openrewrite.staticanalysis.NullableOnMethodReturnType
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@org.jetbrains.annotations.NotNull'
   - org.openrewrite.java.RemoveAnnotation:
@@ -92,3 +91,5 @@ recipeList:
   - org.openrewrite.java.RemoveAnnotation:
       annotationPattern: '@jakarta.annotation.Nonnull'
   - org.openrewrite.java.jspecify.MigrateToJspecify
+  - org.openrewrite.staticanalysis.AnnotateNullableMethods
+  - org.openrewrite.staticanalysis.NullableOnMethodReturnType
