@@ -30,4 +30,6 @@ dependencies {
     implementation("org.openrewrite.recipe:rewrite-static-analysis:$rewriteVersion")
     implementation("org.openrewrite.recipe:rewrite-terraform:$rewriteVersion")
     implementation("org.openrewrite.recipe:rewrite-testing-frameworks:$rewriteVersion")
+
+    testImplementation("org.openrewrite:rewrite-test")
 }
