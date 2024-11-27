@@ -27,6 +27,7 @@ dependencies {
     implementation("org.openrewrite:rewrite-xml")
     implementation("org.openrewrite:rewrite-hcl")
     implementation("org.openrewrite:rewrite-maven")
+    implementation("org.openrewrite.recipe:rewrite-migrate-java:$rewriteVersion")
     implementation("org.openrewrite.recipe:rewrite-static-analysis:$rewriteVersion")
     implementation("org.openrewrite.recipe:rewrite-terraform:$rewriteVersion")
     implementation("org.openrewrite.recipe:rewrite-testing-frameworks:$rewriteVersion")
