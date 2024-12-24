@@ -26,6 +26,7 @@ recipeList:
   - org.openrewrite.java.RemoveUnusedImports
   - org.openrewrite.java.format.EmptyNewlineAtEndOfFile
   - org.openrewrite.java.format.RemoveTrailingWhitespace
+  - org.openrewrite.staticanalysis.CompareEnumsWithEqualityOperator
   - org.openrewrite.staticanalysis.InlineVariable
   - org.openrewrite.staticanalysis.LambdaBlockToExpression
   - org.openrewrite.staticanalysis.MissingOverrideAnnotation
