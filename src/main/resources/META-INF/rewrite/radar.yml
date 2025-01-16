@@ -55,15 +55,3 @@ tags:
 recipeList:
   - org.openrewrite.maven.cleanup.DependencyManagementDependencyRequiresVersion
   - org.openrewrite.java.RemoveUnusedImports
----
-type: specs.openrewrite.org/v1beta/recipe
-name: org.openrewrite.recommendations.InfrastructureAsCode
-displayName: Infrastructure As Code
-description: Used for Infrastructure As Code metric on moderne radar.
-tags:
-  - health check
-  - radar
-recipeList:
-  - 'org.openrewrite.terraform.aws.AWSBestPractices'
-  - 'org.openrewrite.terraform.azure.AzureBestPractices'
-  - 'org.openrewrite.terraform.gcp.GCPBestPractices'
